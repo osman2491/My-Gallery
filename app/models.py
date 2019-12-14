@@ -7,6 +7,9 @@ class Location(models.Model):
     def __str__(self):
         return self.name
 
+    def save_location(self):
+        self.save()
+
 class category(models.Model):
     categorys = models.CharField(max_length=30)
 
