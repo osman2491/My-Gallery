@@ -41,6 +41,7 @@ class Image(models.Model):
     image_description = models.CharField(max_length=30)
     img_location = models.ForeignKey(Location)
     img_category = models.ForeignKey(Category)
+    image = models.ImageField(upload_to = 'welcome/')
 
 
     class Meta:
