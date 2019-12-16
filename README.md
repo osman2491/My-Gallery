@@ -23,7 +23,7 @@ Django 2.2
 Bootstrap css Framework
 Heroku - online deployment
 # Known Bugs
-NO KNOWN BUG
+NO KNOWN BUG known for now.
 
 # Further help
 Contact me at osman67239121@gmail.com
