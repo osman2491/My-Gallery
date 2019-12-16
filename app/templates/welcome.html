@@ -5,19 +5,50 @@
 <div class="container">
     <div class="row">
   {% for img_detail in image %}
+  <!--------start modal-->
+  <div class="modal fade" id="basicExampleModal{{img_detail.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="font-family: 'Itim', cursive;">{{img_detail.image_name}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" >
+              <img class="card-img-top " style="height: 150px;" id="img" class="mode" src="{{img_detail.image.url}}" alt="Card image cap">
+              <p style="font-family: 'Itim', cursive; color: black;">Location: {{img_detail.img_location}} <br> Category: {{img_detail.img_category}}</p>
+      </div>
+      <div class="modal-footer">
+          <input type="text" value="{{data.image.url}}"id={{data.id}}.url>
+        <button type="button" class="btn btn-success" data-dismiss="modal" style="font-family: 'Itim', cursive;">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-----end----->
   <div class="col-md-3">
         <div class="card" style="width: 18rem;">
-            <img src="{{img_detail.image.url}}" class="card-img-top" alt="...">
+            <img src="{{img_detail.image.url}}" class="card-img-top" data-toggle="modal" data-target="#basicExampleModal{{img_detail.id}}">
             <div class="card-body">
               <h5 class="card-title">{{ img_detail.image_name }}</h5>
               
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-primary">View image details</a>
             </div>
           </div>
         </div>
 
-
- 
   {% endfor %}
+
+  <footer class="text-muted">
+    <div class="container">
+      <p style="text-align: center;">
+        <a href="#">Back to top</a>
+      </p>
+      <p style="text-align: center">&copy; 2019</p>
+    </div>
+  </footer>
 
 {% endblock %}
