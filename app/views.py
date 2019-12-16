@@ -8,6 +8,10 @@ def welcome(request):
     return render(request,'welcome.html',{'image':image})
 
 def display_photos(request):
+    try:
+        image = Image.objects.get(id = image_id)
+    except DoesNotExist:
+        raise Http404()
 
     return render(request,'photos.html')
 
