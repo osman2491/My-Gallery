@@ -59,6 +59,11 @@ class Image(models.Model):
     def img_details(cls):
         image = cls.objects.all()
         return image
+
+    @classmethod
+    def search_by_image_name(cls,search_term):
+        image = cls.objects.filter(image_name__icontains=search_term)
+        return image
     
 
     def __str__(self):
