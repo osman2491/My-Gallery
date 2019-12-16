@@ -2,25 +2,63 @@ from django.db import models
 
 
 class Location(models.Model):
-    name = models.CharField(max_length =30)
-
-    def __str__(self):
-        return self.name
+    location = models.CharField(max_length =30)
 
     def save_location(self):
         self.save()
 
-class category(models.Model):
-    categorys = models.CharField(max_length=30)
+    def delete_location(self):
+        self.delete()
+
+    def update_location(self):
+        self.update_location()
+
+    @classmethod
+    def get_location(cls):
+        place = cls.objects.all()
+        return place
 
     def __str__(self):
-        return self.categorys
+        return self.location
 
-class image(models.Model):
+class Category(models.Model):
+    category = models.CharField(max_length=30)
+
+    def save_category(self):
+        self.save()
+
+    def delete_category(self):
+        self.delete()
+
+    def update_category(self):
+        self.update_category()
+
+    def __str__(self):
+        return self.category
+
+class Image(models.Model):
     image_name = models.CharField(max_length=30)
-    image_discription = models.CharField(max_length=30)
-    Location = models.ForeignKey(Location)
-    category = models.ForeignKey(category)
+    image_description = models.CharField(max_length=30)
+    img_location = models.ForeignKey(Location)
+    img_category = models.ForeignKey(Category)
+
+
+    class Meta:
+        ordering = ['image_name']
+
+    def save_image(self):
+        self.save()
+
+    def delete_image(self):
+        self.delete()
+
+    def update_image(self):
+        self.update_image()
+
+    @classmethod
+    def img_details(cls):
+        image = cls.objects.all()
+        return image
     
 
     def __str__(self):
