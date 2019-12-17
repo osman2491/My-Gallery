@@ -30,5 +30,13 @@ class LocationTestClass(TestCase):
         location = Location.objects.all()
         self.assertTrue(len(location) == 0)
 
+class CategoryTestClass(TestCase):
+    def setUp(self):
+        self.category = Category(name='food')
+        self.category.save_category()
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.category, Category))
+
 
 
