@@ -24,7 +24,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # ALLOWED_HOSTS = ['galleryphotoz.herokuapp.com']
 # Application definition
 INSTALLED_APPS = [
-    'bootstrap3',
+    'bootstrap4',
     'photoz.apps.PhotozConfig',
     'django.contrib.admin',
     'django.contrib.auth',
