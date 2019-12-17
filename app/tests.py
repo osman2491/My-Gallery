@@ -25,5 +25,10 @@ class LocationTestClass(TestCase):
         changed_location = Location.objects.filter(name='paris')
         self.assertTrue(len(changed_location) > 0)
 
+    def test_delete_location(self):
+        self.location.delete_location()
+        location = Location.objects.all()
+        self.assertTrue(len(location) == 0)
+
 
 
