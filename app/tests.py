@@ -48,5 +48,19 @@ class CategoryTestClass(TestCase):
         category = Category.objects.all()
         self.assertTrue(len(category) == 0)
 
+class TestImage(TestCase):
+    def setUp(self):
+        self.location = Location(name='Nairobi')
+        self.location.save_location()
+
+        self.category = Category(name='travel')
+        self.category.save_category()
+
+        self.image_test = Image(id=1, name='image', description='my photo', location=self.location,
+                                category=self.category)
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.image_test, Image))
+
 
 
