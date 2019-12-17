@@ -88,5 +88,10 @@ class TestImage(TestCase):
         found_img = self.image_test.search_by_category(category)
         self.assertTrue(len(found_img) > 1)
 
+    def tearDown(self):
+        Image.objects.all().delete()
+        Location.objects.all().delete()
+        Category.objects.all().delete()
+
 
 
