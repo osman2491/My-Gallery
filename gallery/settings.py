@@ -25,7 +25,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # Application definition
 INSTALLED_APPS = [
     'bootstrap4',
-    'photoz.apps.PhotozConfig',
+    'app.apps.appConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
