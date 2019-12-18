@@ -16,13 +16,14 @@ To start the local server in terminal type
 
 # Screenshots
 
-/home/osman/Pictures/Screenshot .png
+![Screenshot](images/Screenshot.png)
 
 # Technologies Used
 Python 3.7
 Django 2.2
 Bootstrap css Framework
 Heroku - online deployment
+
 # Known Bugs
 NO KNOWN BUG known for now.
 
