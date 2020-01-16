@@ -16,7 +16,7 @@ To start the local server in terminal type
 
 # Screenshots
 
-![Screenshot](images/Screenshot.png)
+
 
 # Technologies Used
 Python 3.7
