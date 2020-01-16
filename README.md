@@ -16,7 +16,7 @@ To start the local server in terminal type
 
 # Screenshots
 
-
+![image](https://user-images.githubusercontent.com/53890188/72500914-96f92d00-3846-11ea-9256-00d4cdc4b025.png)
 
 
 
