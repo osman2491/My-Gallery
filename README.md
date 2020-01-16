@@ -16,6 +16,8 @@ To start the local server in terminal type
 
 # Screenshots
 
+https://github.com/osman2491/My-Gallery/tree/master/app/static/images
+
 
 
 # Technologies Used
